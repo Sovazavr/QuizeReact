@@ -1,5 +1,6 @@
 
 import { useState } from 'react';
+import { LeftNavBar } from './components/LeftNavBar';
 import './index.scss';
 
 
@@ -73,13 +74,20 @@ function App() {
   }
 
   return (
-    <div className="App">
-      {step !== questions.length
-        ? <Game question={question} onClickVariant={onClickVariant} step={step} />
-        : < Result correct={correct} />
-      }
 
+
+    <div className="App">
+      <div className='wrapbar'>
+        <LeftNavBar />
+      </div>
+      <div className='wrapQuest'>
+        {step !== questions.length
+          ? <Game question={question} onClickVariant={onClickVariant} step={step} />
+          : < Result correct={correct} />
+        }
+      </div>
     </div>
+
   );
 }
 
