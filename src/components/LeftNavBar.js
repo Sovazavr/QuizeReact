@@ -1,4 +1,5 @@
 import React, { PropTypes, useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./LeftNavBar.scss"
 import { Shevron } from './Shevron'
 
@@ -8,7 +9,10 @@ export const LeftNavBar = ({ }) => {
     return (
         <div className={fade ? 'left_nav_bar' : 'close_nav_bar'}>
             {fade
-                ? <div>LEFTBAR</div>
+                ? (<div className='navigator'>
+                    <Link to="/">Главная</Link>
+                    <Link to="/createquize">Создать квиз</Link>
+                </div>)
                 : <></>
             }
 

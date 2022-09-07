@@ -10,17 +10,24 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    
+
+    .navigator {
+        a {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+    }
 }
 .close_nav_bar {
     @extend .left_nav_bar;
     width: 30px;
-    padding-left:0;
+    padding-left: 0;
     margin-right: 15vw;
 }
 .open {
     align-self: center;
-    
+
     svg {
         transition: transform 0.5s;
         //animation: fade-in-keyframes 1s;
@@ -41,8 +48,6 @@
             cursor: pointer;
         }
     }
-    
-
 }
 // @keyframes fade-in-keyframes {
 //     0% {
